@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>狭义相对论时空可视化</title>  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 20px;  
+        }  
+        #plot {  
+            margin-top: 20px;  
+        }  
+    
+        #numberInput {  
+            display: none; /* 初始时隐藏输入框 */  
+        }  
+     
+    </style>  
+</head>  
+<body>  
+    <h1>狭义相对论时空可视化</h1>  
+    
+    <label for="speeds">请输入相对于地面的速度(以光速的倍数表示，例如 0.5 表示 0.5c，多个速度用逗号分隔):</label>  
+    <input type="text" id="speeds" value="" />  
+    
+    <br/><br/>  
+    
+    <label for="time_range">请输入时间范围 (秒):</label>  
+    <input type="number" id="time_range" value="" />  
+    
+    <br/><br/>  
+    
+    <label for="ref_speed">请输入参考系速度（以光速的倍数表示，例如 0.3 表示 0.3c）:</label>  
+    <input type="number" id="ref_speed" value="" />  
+
+    <br/><br/> 
+
+    <button id="convertButton">点击我输入数字</button>  
+    <input type="number" id="numberInput" placeholder="请输入数字" /> 
+
+    <br/><br/> 
+    
+    <button id="plotBtn">生成时空图</button>  
+    <script src="static/plot.js"></script> 
+    <div id="plot">  
+        <img id="output" src="" alt="Generated plot will appear here." />  
+    </div>  
+
+    <script src="static/plot.js"></script>  
+    <script src="static/button.js"></script> 
+</body>  
+</html>  
